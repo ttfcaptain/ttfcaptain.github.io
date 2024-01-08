@@ -48,9 +48,7 @@ tail_includes:
 
         <!-- read time -->
         - {% include datetime.html date=page.date tooltip=true lang=lang %}
-        <span>
-        {% include read-time.html content=content prompt=true lang=lang %} 
-        </span>
+       
       </span>
 
       <!-- lastmod date -->
@@ -59,6 +57,9 @@ tail_includes:
           {{ site.data.locales[lang].post.updated }}
           {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}
         </span>
+      
+        {% include read-time.html content=content prompt=true lang=lang %} 
+        
       {% endif %}
 
       {% if page.image %}
