@@ -20,32 +20,32 @@ tail_includes:
       <span class="d-flex justify-content-between">
         {{ site.data.locales[lang].post.posted }}
          <!-- author(s) -->
-          <span>
-            {% if page.author %}
-              {% assign authors = page.author %}
-            {% elsif page.authors %}
-              {% assign authors = page.authors %}
-            {% endif %}
-  
-            {{ site.data.locales[lang].post.written_by }}
-  
-            <em>
-              {% if authors %}
-                {% for author in authors %}
-                  {% if site.data.authors[author].url -%}
-                    <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>
-                  {%- else -%}
-                    {{ site.data.authors[author].name }}
-                  {%- endif %}
-                  {% unless forloop.last %}{{ '</em>, <em>' }}{% endunless %}
-                {% endfor %}
-              {% else %}
-                <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
-              {% endif %}
-            </em>
-          </span>
+        <span>
+          {% if page.author %}
+            {% assign authors = page.author %}
+          {% elsif page.authors %}
+            {% assign authors = page.authors %}
+          {% endif %}
 
-          - {% include datetime.html date=page.date tooltip=true lang=lang %}
+          {{ site.data.locales[lang].post.written_by }}
+
+          <em>
+            {% if authors %}
+              {% for author in authors %}
+                {% if site.data.authors[author].url -%}
+                  <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>
+                {%- else -%}
+                  {{ site.data.authors[author].name }}
+                {%- endif %}
+                {% unless forloop.last %}{{ '</em>, <em>' }}{% endunless %}
+              {% endfor %}
+            {% else %}
+              <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
+            {% endif %}
+          </em>
+        </span>
+
+        - {% include datetime.html date=page.date tooltip=true lang=lang %}
        
       </span>
 
