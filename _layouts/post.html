@@ -20,34 +20,35 @@ tail_includes:
       <span>
         {{ site.data.locales[lang].post.posted }}
 
+        <div class="d-flex justify-content-between">
          <!-- author(s) -->
-        <span>
-          {% if page.author %}
-            {% assign authors = page.author %}
-          {% elsif page.authors %}
-            {% assign authors = page.authors %}
-          {% endif %}
-
-          {{ site.data.locales[lang].post.written_by }}
-
-          <em>
-            {% if authors %}
-              {% for author in authors %}
-                {% if site.data.authors[author].url -%}
-                  <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>
-                {%- else -%}
-                  {{ site.data.authors[author].name }}
-                {%- endif %}
-                {% unless forloop.last %}{{ '</em>, <em>' }}{% endunless %}
-              {% endfor %}
-            {% else %}
-              <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
+          <span>
+            {% if page.author %}
+              {% assign authors = page.author %}
+            {% elsif page.authors %}
+              {% assign authors = page.authors %}
             {% endif %}
-          </em>
-        </span>
+  
+            {{ site.data.locales[lang].post.written_by }}
+  
+            <em>
+              {% if authors %}
+                {% for author in authors %}
+                  {% if site.data.authors[author].url -%}
+                    <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>
+                  {%- else -%}
+                    {{ site.data.authors[author].name }}
+                  {%- endif %}
+                  {% unless forloop.last %}{{ '</em>, <em>' }}{% endunless %}
+                {% endfor %}
+              {% else %}
+                <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
+              {% endif %}
+            </em>
+          </span>
 
-        - {% include datetime.html date=page.date tooltip=true lang=lang %}
-       
+          - {% include datetime.html date=page.date tooltip=true lang=lang %}
+        </div>
       </span>
 
       <!-- lastmod date -->
@@ -59,6 +60,10 @@ tail_includes:
       {% endif %}
       
       <!-- read time -->
+      
+      <div class="d-flex justify-content-between">
+       
+      </div>
       {% include read-time.html content=content prompt=true lang=lang %} 
 
       {% if page.image %}
