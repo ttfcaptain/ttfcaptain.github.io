@@ -17,10 +17,8 @@ tail_includes:
 
     <div class="post-meta text-muted">
       <!-- published date -->
-      <span>
+      <span class="d-flex justify-content-between">
         {{ site.data.locales[lang].post.posted }}
-
-        <div class="d-flex justify-content-between">
          <!-- author(s) -->
           <span>
             {% if page.author %}
@@ -48,7 +46,7 @@ tail_includes:
           </span>
 
           - {% include datetime.html date=page.date tooltip=true lang=lang %}
-        </div>
+       
       </span>
 
       <!-- lastmod date -->
