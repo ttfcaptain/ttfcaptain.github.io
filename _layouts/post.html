@@ -27,32 +27,35 @@ tail_includes:
         {{ site.data.locales[lang].post.posted }}
         {{ site.data.locales[lang].post.written_by }}
         
-        <em>
-          {% if authors %}
-            {% for author in authors %}
-              {% if site.data.authors[author].url -%}
-                <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>
-              {%- else -%}
-                {{ site.data.authors[author].name }}
-              {%- endif %}
-              {% unless forloop.last %}{{ '</em>, <em>' }}{% endunless %}
-            {% endfor %}
-          {% else %}
-            <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
-          {% endif %}
-        </em>
+        {% if authors %}
+          {% for author in authors %}
+            {% if site.data.authors[author].url -%}
+              <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>
+            {%- else -%}
+              {{ site.data.authors[author].name }}
+            {%- endif %}
+            {% unless forloop.last %}{{ '</em>, <em>' }}{% endunless %}
+          {% endfor %}
+        {% else %}
+          <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
+        {% endif %}
+       
       </span>
 
-      <!-- published date -->
-      - {% include datetime.html date=page.date tooltip=true lang=lang %}
       
-      <!-- lastmod date -->
-      {% if page.last_modified_at and page.last_modified_at != page.date %}
-        <span>
-          {{ site.data.locales[lang].post.updated }}
-          {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}
-        </span>        
-      {% endif %}
+      <em>
+        <!-- published date -->
+        - {% include datetime.html date=page.date tooltip=true lang=lang %}
+        
+        
+        <!-- lastmod date -->
+        {% if page.last_modified_at and page.last_modified_at != page.date %}
+          
+            {{ site.data.locales[lang].post.updated }}
+            {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}
+                  
+        {% endif %}
+      </em>
       
       <!-- read time -->
       - {% include read-time.html content=content prompt=true lang=lang %} 
