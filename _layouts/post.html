@@ -17,7 +17,6 @@ tail_includes:
 
     <div class="post-meta text-muted">
       <!-- author(s) -->
-      <span>
         {% if page.author %}
           {% assign authors = page.author %}
         {% elsif page.authors %}
@@ -39,8 +38,6 @@ tail_includes:
         {% else %}
           <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
         {% endif %}
-       
-      </span>
 
       <!-- published date -->
       <span>      
