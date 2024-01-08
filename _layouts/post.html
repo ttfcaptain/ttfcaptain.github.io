@@ -24,8 +24,9 @@ tail_includes:
           {% assign authors = page.authors %}
         {% endif %}
 
+        {{ site.data.locales[lang].post.posted }}
         {{ site.data.locales[lang].post.written_by }}
-
+        
         <em>
           {% if authors %}
             {% for author in authors %}
@@ -43,25 +44,18 @@ tail_includes:
       </span>
 
       <!-- published date -->
-      <span>
-        {{ site.data.locales[lang].post.posted }}
-        {% include datetime.html date=page.date tooltip=true lang=lang %}
-      </span>
+      - {% include datetime.html date=page.date tooltip=true lang=lang %}
       
       <!-- lastmod date -->
-      <span>
-        {% if page.last_modified_at and page.last_modified_at != page.date %}
-          <span>
-            {{ site.data.locales[lang].post.updated }}
-            {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}
-          </span>        
-        {% endif %}
-      </span>
+      {% if page.last_modified_at and page.last_modified_at != page.date %}
+        <span>
+          {{ site.data.locales[lang].post.updated }}
+          {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}
+        </span>        
+      {% endif %}
       
       <!-- read time -->
-      <span>
-        {% include read-time.html content=content prompt=true lang=lang %} 
-      </span>
+      - {% include read-time.html content=content prompt=true lang=lang %} 
       
       {% if page.image %}
         {% capture src %}src="{{ page.image.path | default: page.image }}"{% endcapture %}
