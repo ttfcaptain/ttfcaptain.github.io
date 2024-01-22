@@ -22,5 +22,6 @@ void OnMouseDrag () {
 ```
 Drag 방법은 두가지
 
--  OnMouseDrag
+-  OnMouseDrag #
+	- OnMouseDown, OnMouseDrag
 -  xray 이용
