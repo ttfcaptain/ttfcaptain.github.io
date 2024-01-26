@@ -27,7 +27,7 @@ image:
 > 생성한 오브젝트에 `collider` COMPONENT 적용.
 
 ### Script 작성
-> 'MouseDrag' SCRIPT 파일 생성/추가.
+> "MouseDrag" SCRIPT 파일 생성/추가.
 
 ## **Explain**
 > 마우스 드래그할 오브젝트를 생성한 후 `collider` COMPONENT 를 추가함.
