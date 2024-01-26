@@ -39,19 +39,19 @@ Vector3 _clickDistance;
 
 void OnMouseDown()
 {
- _clickDistance = TransMousPos - transform.position;
+  _clickDistance = TransMousPos - transform.position;
 }
 
 void OnMouseDrag()
 {
- transform.position = TransMousPos - _clickDistance;
+  transform.position = TransMousPos - _clickDistance;
 }
 
 Vector3 TransMousPos
 {
- get
- {
-   return Camera.main.ScreenToWorldPoint(Input.mousePosition);
- }
+  get
+    {
+      return Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    }
 }
 ```
