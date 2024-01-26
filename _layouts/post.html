@@ -42,10 +42,10 @@ tail_includes:
         {% endif %}
 
       <!-- published date -->
-      
+      <span>      
+        - {% include datetime.html date=page.date tooltip=true lang=lang %}
+      </span>
               
-
-
       <!-- read time -->
       <span>      
         {% include read-time.html content=content prompt=true lang=lang %} 
