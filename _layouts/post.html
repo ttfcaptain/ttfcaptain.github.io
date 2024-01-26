@@ -20,10 +20,10 @@ tail_includes:
       <span>
         
         <div class="d-flex justify-content-between">
-        {{ site.data.locales[lang].post.posted }}
         
           <!-- author(s) -->
           <span>
+            {{ site.data.locales[lang].post.posted }}
             {% if page.author %}
               {% assign authors = page.author %}
             {% elsif page.authors %}
