@@ -28,13 +28,11 @@ image:
 
 #### Script 작성
 - 'MouseDrag' script 파일 생성/추가.
-
 `　　　　　　　　　　　　　　　　　`
 ## EXPLAIN
 마우스 드래그할 오브젝트를 생성한 후 **Collider** COMPONENT 를 추가함.  
 (**OnMouseDown**, **OnMouseDrag** 메서드는 **Collider**에서 반응)
-
-___
+`　　　　　　　　　　　　　　　　　`
 ## CODE
 ```c#
 Vector3 _clickDistance;
