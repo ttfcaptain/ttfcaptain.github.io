@@ -16,7 +16,7 @@ image:
 # **Mouse Drag**
 
 ## **SUMMARY**
-마우스 클릭으로 오브젝트 이동하기.
+마우스 클릭으로 오브젝트 이동하기.  
 ___
 ## **SETTING**
 ### Object 생성
