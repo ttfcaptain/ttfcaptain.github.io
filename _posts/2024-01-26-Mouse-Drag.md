@@ -15,9 +15,14 @@ image:
 
 # Mouse Drag
 
-## > Summary
+## **Summary**
+> 마우스 클릭으로 오브젝트 이동하기.
+## **Explain**
+### Object 생성
+### Collider 적용
+### `MouseDrag` script 작성
 ## **Setting**
-## Code
+## **Code**
 ```c#s
 Vector3 _clickDistance;
 
