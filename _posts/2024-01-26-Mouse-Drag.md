@@ -20,18 +20,18 @@ image:
 
 ## **Setting**
 
-### Object 생성
+### > Object 생성
 > 드래그할 오브젝트 생성.
 
 ### Collider 적용
 > 생성한 오브젝트에 `collider` COMPONENT 적용.
 
 ### Script 작성
-> `MouseDrag` SCRIPT 파일 생성/추가.
+> 'MouseDrag' SCRIPT 파일 생성/추가.
 
 ## **Explain**
-> 마우스 드래그할 오브젝트를 생성한 후 'collider` component를 추가함.  
->   (`OnMouseDown', `OnMouseDrag` 메서드는 `collider`에서 반응)  
+> 마우스 드래그할 오브젝트를 생성한 후 `collider` COMPONENT 를 추가함.
+>  (**OnMouseDown**, **OnMouseDrag** 메서드는 `collider`에서 반응)  
 > 
 
 ## **Code**
@@ -40,18 +40,19 @@ Vector3 _clickDistance;
 
 void OnMouseDown()
 {
-	_clickDistance = TransMousPos - transform.position;
+ _clickDistance = TransMousPos - transform.position;
 }
 
 void OnMouseDrag()
 {
-	transform.position = TransMousPos - _clickDistance;
+ transform.position = TransMousPos - _clickDistance;
 }
 
 Vector3 TransMousPos
 {
-	get {
-			return Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		}
+ get
+ {
+   return Camera.main.ScreenToWorldPoint(Input.mousePosition);
+ }
 }
 ```
