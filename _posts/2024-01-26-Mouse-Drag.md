@@ -1,4 +1,3 @@
-
 ---
 title: Mouse Drag
 author: Min
