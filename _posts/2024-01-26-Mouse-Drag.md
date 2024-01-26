@@ -16,7 +16,7 @@ image:
 # **Mouse Drag**
 
 > ## **SUMMARY**  
-마우스 클릭으로 오브젝트 이동하기.  
+마우스 클릭으로 오브젝트 이동하기.
 
 ## **SETTING**
 #### Object 생성
@@ -24,7 +24,7 @@ image:
 #### Collider 적용
 - 생성한 오브젝트에 **Collider** component 적용.  
 #### Script 작성
-- 'MouseDrag' script 파일 생성/추가.  
+- 'MouseDrag' script 파일 생성/추가.
 _________________________
 ## **EXPLAIN**
 마우스 드래그할 오브젝트를 생성한 후 **Collider** COMPONENT 를 추가함.  
