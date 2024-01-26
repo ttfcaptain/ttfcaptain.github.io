@@ -13,12 +13,12 @@ image:
   alt: Move with mouse click.
 ---
 
-# Mouse Drag
+# **Mouse Drag**
 
-## **Summary**
+## **SUMMARY**
 > 마우스 클릭으로 오브젝트 이동하기.
 
-## **Setting**
+## **SETTING**
 
 ### Object 생성
 드래그할 오브젝트 생성.
@@ -29,11 +29,11 @@ image:
 ### Script 작성
 'MouseDrag' script 파일 생성/추가.
 
-## **Explain**
+## **EXPLAIN**
 마우스 드래그할 오브젝트를 생성한 후 **Collider** COMPONENT 를 추가함.
 (**OnMouseDown**, **OnMouseDrag** 메서드는 `collider`에서 반응)  
 
-## **Code**
+## **CODE**
 ```c#
 Vector3 _clickDistance;
 
