@@ -1,6 +1,6 @@
 ---
 title: Mouse Drag
-author: Min
+author: min
 date: 2024-01-26 15:12:00 +0900
 categories: [Unity]
 tags: [mouse,drag]
