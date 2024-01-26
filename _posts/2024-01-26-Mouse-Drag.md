@@ -18,10 +18,23 @@ image:
 ## > Summary
 ## **Setting**
 ## Code
+```c#s
+Vector3 _clickDistance;
 
-```c#
-function TestFunc(){
-	float num = 1.0f;
-	
+void OnMouseDown()
+{
+	_clickDistance = TransMousPos - transform.position;
+}
+
+void OnMouseDrag()
+{
+	transform.position = TransMousPos - _clickDistance;
+}
+
+Vector3 TransMousPos
+{
+	get {
+			return Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		}
 }
 ```
