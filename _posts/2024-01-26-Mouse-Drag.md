@@ -15,9 +15,9 @@ image:
 
 # **Mouse Drag**
 
-## **SUMMARY**
+> ## **SUMMARY**
 마우스 클릭으로 오브젝트 이동하기.  
----
+
 ## **SETTING**
 ### Object 생성
 드래그할 오브젝트 생성.
