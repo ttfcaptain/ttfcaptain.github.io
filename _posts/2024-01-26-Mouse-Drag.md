@@ -24,10 +24,10 @@ image:
 드래그할 오브젝트 생성.
 
 ### Collider 적용
-생성한 오브젝트에 **Collider** COMPONENT 적용.
+생성한 오브젝트에 **Collider** component 적용.
 
 ### Script 작성
-'MouseDrag' SCRIPT 파일 생성/추가.
+'MouseDrag' script 파일 생성/추가.
 
 ## **Explain**
 마우스 드래그할 오브젝트를 생성한 후 **Collider** COMPONENT 를 추가함.
